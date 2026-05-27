@@ -1,0 +1,117 @@
+# models/staging/schema.yml
+
+version: 2
+
+models:
+  - name: stg_suppliers
+    description: "Cleaned and typed supplier records from raw ingestion"
+    columns:
+      - name: supplier_id
+        description: "Unique supplier identifier"
+        tests:
+          - unique
+          - not_null
+
+      - name: supplier_name
+        tests:
+          - not_null
+
+      - name: country
+        tests:
+          - not_null
+
+      - name: risk_level
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - LOW
+                  - MEDIUM
+                  - HIGH
+                  - CRITICAL
+
+      - name: reliability_score
+        tests:
+          - not_null
+
+      - name: is_active
+        tests:
+          - not_null
+
+  - name: stg_inventory
+    description: "Cleaned inventory records with stock value calculations"
+    columns:
+      - name: inventory_id
+        tests:
+          - unique
+          - not_null
+
+      - name: sku
+        tests:
+          - not_null
+
+      - name: warehouse
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Nairobi-KE
+                  - Mombasa-KE
+                  - Lagos-NG
+                  - Accra-GH
+                  - Cairo-EG
+                  - Johannesburg-ZA
+                  - London-UK
+                  - Dubai-UAE
+
+      - name: quantity_on_hand
+        tests:
+          - not_null
+
+      - name: unit_cost_usd
+        tests:
+          - not_null
+
+  - name: stg_shipments
+    description: "Cleaned shipment records with delay categorization"
+    columns:
+      - name: shipment_id
+        tests:
+          - unique
+          - not_null
+
+      - name: supplier_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_suppliers')
+              field: supplier_id
+
+      - name: status
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - ON_TIME
+                  - DELAYED
+                  - IN_TRANSIT
+                  - DELIVERED
+                  - CANCELLED
+
+      - name: delay_category
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - NO_DELAY
+                  - MINOR
+                  - MODERATE
+                  - SEVERE
+
+      - name: delay_days
+        tests:
+          - not_null

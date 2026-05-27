@@ -1,0 +1,55 @@
+# models/marts/schema.yml
+
+version: 2
+
+models:
+  - name: mart_supplier_risk
+    description: "Supplier risk scores joined with shipment performance stats"
+    columns:
+      - name: supplier_id
+        tests:
+          - unique
+          - not_null
+
+      - name: risk_level
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - LOW
+                  - MEDIUM
+                  - HIGH
+                  - CRITICAL
+
+      - name: disruption_rate_pct
+        description: "Must be between 0 and 100"
+        tests:
+          - not_null
+
+      - name: reliability_score
+        tests:
+          - not_null
+
+  - name: mart_inventory_health
+    description: "Inventory health with supplier risk context"
+    columns:
+      - name: inventory_id
+        tests:
+          - unique
+          - not_null
+
+      - name: stock_status
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - HEALTHY
+                  - LOW
+                  - CRITICAL
+                  - STOCKOUT
+
+      - name: stock_value_usd
+        tests:
+          - not_null
