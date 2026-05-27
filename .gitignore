@@ -6,3 +6,6 @@ data/raw/*.csv
 data/processed/*.csv
 *.duckdb
 .airflow/
+dbt_models/target/
+dbt_models/logs/
+logs/
