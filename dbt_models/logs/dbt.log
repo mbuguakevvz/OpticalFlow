@@ -1,0 +1,1197 @@
+[0m20:31:46.138659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E2BE9E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E3D443A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E3D44190>]}
+
+
+============================== 20:31:46.145638 | cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05 ==============================
+[0m20:31:46.145638 [info ] [MainThread]: Running with dbt=1.11.11
+[0m20:31:46.147640 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\user\\OpticalFlow\\dbt_models', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\user\\OpticalFlow\\dbt_models\\logs'}
+[0m20:31:46.849329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E3C13AC0>]}
+[0m20:31:47.004913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E3D460B0>]}
+[0m20:31:47.009899 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:31:47.719976 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m20:31:47.721970 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:31:47.723965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E0629AB0>]}
+[0m20:31:52.468222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E5480040>]}
+[0m20:31:52.674670 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\user\OpticalFlow\dbt_models\target\manifest.json
+[0m20:31:52.680110 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\user\OpticalFlow\dbt_models\target\semantic_manifest.json
+[0m20:31:52.707043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E5570DF0>]}
+[0m20:31:52.708042 [info ] [MainThread]: Found 5 models, 485 macros
+[0m20:31:52.709037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E5570790>]}
+[0m20:31:52.712029 [info ] [MainThread]: 
+[0m20:31:52.714024 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:31:52.715022 [info ] [MainThread]: 
+[0m20:31:52.717015 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:31:52.728984 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_opticalflow'
+[0m20:31:52.735965 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_opticalflow'
+[0m20:31:57.256835 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow"
+[0m20:31:57.257831 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow"
+[0m20:31:57.258827 [debug] [ThreadPool]: On list_opticalflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "list_opticalflow"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"opticalflow"'
+    
+  
+  
+[0m20:31:57.259825 [debug] [ThreadPool]: On list_opticalflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "list_opticalflow"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"opticalflow"'
+    
+  
+  
+[0m20:31:57.259825 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:31:57.260820 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:31:57.305219 [debug] [ThreadPool]: SQL status: OK in 0.045 seconds
+[0m20:31:57.306216 [debug] [ThreadPool]: SQL status: OK in 0.045 seconds
+[0m20:31:57.308210 [debug] [ThreadPool]: On list_opticalflow: Close
+[0m20:31:57.310208 [debug] [ThreadPool]: On list_opticalflow: Close
+[0m20:31:57.312211 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_opticalflow, now create_opticalflow_transformed_marts)
+[0m20:31:57.313198 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_opticalflow, now create_opticalflow_transformed_staging)
+[0m20:31:57.314194 [debug] [ThreadPool]: Creating schema "database: "opticalflow"
+schema: "transformed_marts"
+"
+[0m20:31:57.314194 [debug] [ThreadPool]: Creating schema "database: "opticalflow"
+schema: "transformed_staging"
+"
+[0m20:31:57.336254 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_marts"
+[0m20:31:57.341239 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_staging"
+[0m20:31:57.342240 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "create_opticalflow_transformed_marts"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='opticalflow'
+        and type='sqlite'
+    
+  
+[0m20:31:57.342240 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "create_opticalflow_transformed_staging"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='opticalflow'
+        and type='sqlite'
+    
+  
+[0m20:31:57.343234 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:31:57.344231 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:31:57.346226 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m20:31:57.347224 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m20:31:57.351213 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_marts"
+[0m20:31:57.353207 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_staging"
+[0m20:31:57.354219 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: BEGIN
+[0m20:31:57.354219 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: BEGIN
+[0m20:31:57.356200 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m20:31:57.357197 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_marts"
+[0m20:31:57.358222 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "create_opticalflow_transformed_marts"} */
+
+    
+    
+        create schema if not exists "opticalflow"."transformed_marts"
+    
+[0m20:31:57.359191 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m20:31:57.360188 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_staging"
+[0m20:31:57.361186 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "create_opticalflow_transformed_staging"} */
+
+    
+    
+        create schema if not exists "opticalflow"."transformed_staging"
+    
+[0m20:31:57.362183 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m20:31:57.363181 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: COMMIT
+[0m20:31:57.364178 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m20:31:57.366172 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_marts"
+[0m20:31:57.369164 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: COMMIT
+[0m20:31:57.369164 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: COMMIT
+[0m20:31:57.370163 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_staging"
+[0m20:31:57.371158 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: COMMIT
+[0m20:31:57.375149 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m20:31:57.376147 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: Close
+[0m20:31:57.385059 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m20:31:57.386062 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: Close
+[0m20:31:57.389483 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_opticalflow_transformed_marts'
+[0m20:31:57.396465 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_opticalflow_transformed_staging'
+[0m20:31:57.406437 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow_transformed_marts"
+[0m20:31:57.413418 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow_transformed_staging"
+[0m20:31:57.414416 [debug] [ThreadPool]: On list_opticalflow_transformed_marts: BEGIN
+[0m20:31:57.417410 [debug] [ThreadPool]: On list_opticalflow_transformed_staging: BEGIN
+[0m20:31:57.418407 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:31:57.419415 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:31:57.421397 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m20:31:57.422394 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow_transformed_marts"
+[0m20:31:57.423391 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m20:31:57.424389 [debug] [ThreadPool]: On list_opticalflow_transformed_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "list_opticalflow_transformed_marts"} */
+select
+      'opticalflow' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'transformed_marts'
+    and lower(table_catalog) = 'opticalflow'
+  
+[0m20:31:57.425394 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow_transformed_staging"
+[0m20:31:57.426383 [debug] [ThreadPool]: On list_opticalflow_transformed_staging: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "list_opticalflow_transformed_staging"} */
+select
+      'opticalflow' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'transformed_staging'
+    and lower(table_catalog) = 'opticalflow'
+  
+[0m20:31:57.436357 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m20:31:57.437356 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m20:31:57.440348 [debug] [ThreadPool]: On list_opticalflow_transformed_staging: ROLLBACK
+[0m20:31:57.442341 [debug] [ThreadPool]: On list_opticalflow_transformed_marts: ROLLBACK
+[0m20:31:57.445333 [debug] [ThreadPool]: Failed to rollback 'list_opticalflow_transformed_marts'
+[0m20:31:57.446330 [debug] [ThreadPool]: On list_opticalflow_transformed_marts: Close
+[0m20:31:57.447327 [debug] [ThreadPool]: Failed to rollback 'list_opticalflow_transformed_staging'
+[0m20:31:57.449325 [debug] [ThreadPool]: On list_opticalflow_transformed_staging: Close
+[0m20:31:57.451319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E05B3250>]}
+[0m20:31:57.453313 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:31:57.454313 [debug] [MainThread]: On master: BEGIN
+[0m20:31:57.456305 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:31:57.458301 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m20:31:57.459296 [debug] [MainThread]: On master: COMMIT
+[0m20:31:57.459296 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:31:57.460293 [debug] [MainThread]: On master: COMMIT
+[0m20:31:57.461300 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:31:57.461300 [debug] [MainThread]: On master: Close
+[0m20:31:57.471264 [debug] [Thread-1 (]: Began running node model.dbt_models.stg_inventory
+[0m20:31:57.472261 [debug] [Thread-2 (]: Began running node model.dbt_models.stg_shipments
+[0m20:31:57.473258 [debug] [Thread-3 (]: Began running node model.dbt_models.stg_suppliers
+[0m20:31:57.474256 [info ] [Thread-1 (]: 1 of 5 START sql view model transformed_staging.stg_inventory .................. [RUN]
+[0m20:31:57.478245 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.dbt_models.stg_inventory'
+[0m20:31:57.479243 [debug] [Thread-1 (]: Began compiling node model.dbt_models.stg_inventory
+[0m20:31:57.475253 [info ] [Thread-2 (]: 2 of 5 START sql view model transformed_staging.stg_shipments .................. [RUN]
+[0m20:31:57.477248 [info ] [Thread-3 (]: 3 of 5 START sql view model transformed_staging.stg_suppliers .................. [RUN]
+[0m20:31:57.492206 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.dbt_models.stg_shipments'
+[0m20:31:57.501185 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_models.stg_inventory"
+[0m20:31:57.502181 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.dbt_models.stg_suppliers'
+[0m20:31:57.503178 [debug] [Thread-2 (]: Began compiling node model.dbt_models.stg_shipments
+[0m20:31:57.505174 [debug] [Thread-3 (]: Began compiling node model.dbt_models.stg_suppliers
+[0m20:31:57.511157 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_models.stg_shipments"
+[0m20:31:57.519137 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_models.stg_suppliers"
+[0m20:31:57.523125 [debug] [Thread-3 (]: Began executing node model.dbt_models.stg_suppliers
+[0m20:31:57.536090 [debug] [Thread-1 (]: Began executing node model.dbt_models.stg_inventory
+[0m20:31:57.645797 [debug] [Thread-2 (]: Began executing node model.dbt_models.stg_shipments
+[0m20:31:57.714914 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_models.stg_suppliers"
+[0m20:31:57.719903 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_models.stg_shipments"
+[0m20:31:57.720901 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_models.stg_inventory"
+[0m20:31:57.726884 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m20:31:57.727881 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m20:31:57.728879 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: BEGIN
+[0m20:31:57.729875 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: BEGIN
+[0m20:31:57.731871 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:31:57.733865 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m20:31:57.734863 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:31:57.736864 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: BEGIN
+[0m20:31:57.737853 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m20:31:57.738851 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m20:31:57.738851 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:31:57.739848 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m20:31:57.740847 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m20:31:57.742842 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_inventory"} */
+
+  
+  create view "opticalflow"."transformed_staging"."stg_inventory__dbt_tmp" as (
+    -- models/staging/stg_inventory.sql
+WITH source AS (
+    SELECT * FROM raw.raw_inventory
+)
+
+SELECT
+    inventory_id,
+    TRIM(sku)                                   AS sku,
+    TRIM(product_category)                      AS product_category,
+    TRIM(warehouse)                             AS warehouse,
+    supplier_id,
+    CAST(quantity_on_hand AS INTEGER)           AS quantity_on_hand,
+    CAST(reorder_point AS INTEGER)              AS reorder_point,
+    CAST(below_reorder AS BOOLEAN)              AS is_below_reorder,
+    CAST(unit_cost_usd AS DOUBLE)               AS unit_cost_usd,
+    CAST(last_restocked_date AS DATE)           AS last_restocked_date,
+    CAST(expiry_date AS DATE)                   AS expiry_date,
+    ROUND(quantity_on_hand * unit_cost_usd, 2)  AS stock_value_usd,
+    CAST(_ingested_at AS TIMESTAMP)             AS ingested_at
+FROM source
+WHERE inventory_id IS NOT NULL
+  );
+
+[0m20:31:57.743837 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_shipments"} */
+
+  
+  create view "opticalflow"."transformed_staging"."stg_shipments__dbt_tmp" as (
+    -- models/staging/stg_shipments.sql
+WITH source AS (
+    SELECT * FROM raw.raw_shipments
+)
+
+SELECT
+    shipment_id,
+    supplier_id,
+    TRIM(sku)                                   AS sku,
+    TRIM(origin_country)                        AS origin_country,
+    TRIM(destination_warehouse)                 AS destination_warehouse,
+    CAST(quantity_shipped AS INTEGER)           AS quantity_shipped,
+    CAST(scheduled_date AS DATE)                AS scheduled_date,
+    CAST(actual_arrival_date AS DATE)           AS actual_arrival_date,
+    CAST(delay_days AS INTEGER)                 AS delay_days,
+    TRIM(status)                                AS status,
+    CAST(freight_cost_usd AS DOUBLE)            AS freight_cost_usd,
+    TRIM(carrier)                               AS carrier,
+    CAST(disruption_flag AS BOOLEAN)            AS is_disrupted,
+    CASE
+        WHEN delay_days = 0             THEN 'NO_DELAY'
+        WHEN delay_days BETWEEN 1 AND 5 THEN 'MINOR'
+        WHEN delay_days BETWEEN 6 AND 14 THEN 'MODERATE'
+        ELSE                                 'SEVERE'
+    END                                         AS delay_category,
+    CAST(_ingested_at AS TIMESTAMP)             AS ingested_at
+FROM source
+WHERE shipment_id IS NOT NULL
+  );
+
+[0m20:31:57.745832 [debug] [Thread-3 (]: SQL status: OK in 0.006 seconds
+[0m20:31:57.746830 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m20:31:57.748842 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m20:31:57.750822 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_suppliers"} */
+
+  
+  create view "opticalflow"."transformed_staging"."stg_suppliers__dbt_tmp" as (
+    -- models/staging/stg_suppliers.sql
+WITH source AS (
+    SELECT * FROM raw.raw_suppliers
+)
+
+SELECT
+    supplier_id,
+    TRIM(supplier_name)                         AS supplier_name,
+    TRIM(country)                               AS country,
+    LOWER(TRIM(contact_email))                  AS contact_email,
+    TRIM(product_category)                      AS product_category,
+    CAST(lead_time_days AS INTEGER)             AS lead_time_days,
+    CAST(reliability_score AS DOUBLE)           AS reliability_score,
+    TRIM(risk_level)                            AS risk_level,
+    CAST(active AS BOOLEAN)                     AS is_active,
+    CAST(onboarded_date AS DATE)                AS onboarded_date,
+    CAST(annual_spend_usd AS DOUBLE)            AS annual_spend_usd,
+    CAST(_ingested_at AS TIMESTAMP)             AS ingested_at
+FROM source
+WHERE supplier_id IS NOT NULL
+  );
+
+[0m20:31:57.751817 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m20:31:57.768771 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m20:31:57.777746 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m20:31:57.778744 [debug] [Thread-3 (]: SQL status: OK in 0.009 seconds
+[0m20:31:57.779740 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_inventory"} */
+alter view "opticalflow"."transformed_staging"."stg_inventory__dbt_tmp" rename to "stg_inventory"
+[0m20:31:57.780739 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_shipments"} */
+alter view "opticalflow"."transformed_staging"."stg_shipments__dbt_tmp" rename to "stg_shipments"
+[0m20:31:57.787720 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m20:31:57.789714 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_suppliers"} */
+alter view "opticalflow"."transformed_staging"."stg_suppliers__dbt_tmp" rename to "stg_suppliers"
+[0m20:31:57.790715 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m20:31:57.792709 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m20:31:57.804675 [debug] [Thread-3 (]: SQL status: OK in 0.013 seconds
+[0m20:31:57.832603 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: COMMIT
+[0m20:31:57.849555 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: COMMIT
+[0m20:31:57.850554 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: COMMIT
+[0m20:31:57.851550 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m20:31:57.852547 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m20:31:57.853545 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m20:31:57.854541 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: COMMIT
+[0m20:31:57.854541 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: COMMIT
+[0m20:31:57.856536 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: COMMIT
+[0m20:31:57.859529 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m20:31:57.872512 [debug] [Thread-2 (]: SQL status: OK in 0.015 seconds
+[0m20:31:57.873496 [debug] [Thread-3 (]: SQL status: OK in 0.016 seconds
+[0m20:31:57.876483 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m20:31:57.881473 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m20:31:57.888453 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m20:31:57.889453 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_inventory"} */
+
+      drop view if exists "opticalflow"."transformed_staging"."stg_inventory__dbt_backup" cascade
+    
+[0m20:31:57.890459 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_shipments"} */
+
+      drop view if exists "opticalflow"."transformed_staging"."stg_shipments__dbt_backup" cascade
+    
+[0m20:31:57.891442 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_suppliers"} */
+
+      drop view if exists "opticalflow"."transformed_staging"."stg_suppliers__dbt_backup" cascade
+    
+[0m20:31:57.894436 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m20:31:57.896430 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m20:31:57.901417 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: Close
+[0m20:31:57.904413 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: Close
+[0m20:31:57.904413 [debug] [Thread-3 (]: SQL status: OK in 0.009 seconds
+[0m20:31:57.910916 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: Close
+[0m20:31:57.912885 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4DFCD30A0>]}
+[0m20:31:57.913881 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E5A2BA60>]}
+[0m20:31:57.916873 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E5A59AB0>]}
+[0m20:31:57.915879 [info ] [Thread-1 (]: 1 of 5 OK created sql view model transformed_staging.stg_inventory ............. [[32mOK[0m in 0.43s]
+[0m20:31:57.918870 [info ] [Thread-2 (]: 2 of 5 OK created sql view model transformed_staging.stg_shipments ............. [[32mOK[0m in 0.42s]
+[0m20:31:57.921860 [debug] [Thread-1 (]: Finished running node model.dbt_models.stg_inventory
+[0m20:31:57.922858 [debug] [Thread-2 (]: Finished running node model.dbt_models.stg_shipments
+[0m20:31:57.919867 [info ] [Thread-3 (]: 3 of 5 OK created sql view model transformed_staging.stg_suppliers ............. [[32mOK[0m in 0.41s]
+[0m20:31:57.924899 [debug] [Thread-3 (]: Finished running node model.dbt_models.stg_suppliers
+[0m20:31:57.926785 [debug] [Thread-4 (]: Began running node model.dbt_models.mart_inventory_health
+[0m20:31:57.927789 [debug] [Thread-1 (]: Began running node model.dbt_models.mart_supplier_risk
+[0m20:31:57.928967 [info ] [Thread-4 (]: 4 of 5 START sql table model transformed_marts.mart_inventory_health ........... [RUN]
+[0m20:31:57.931962 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.dbt_models.mart_inventory_health'
+[0m20:31:57.933957 [debug] [Thread-4 (]: Began compiling node model.dbt_models.mart_inventory_health
+[0m20:31:57.929969 [info ] [Thread-1 (]: 5 of 5 START sql table model transformed_marts.mart_supplier_risk .............. [RUN]
+[0m20:31:57.939953 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_models.stg_inventory, now model.dbt_models.mart_supplier_risk)
+[0m20:31:57.940938 [debug] [Thread-1 (]: Began compiling node model.dbt_models.mart_supplier_risk
+[0m20:31:57.941936 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_models.mart_inventory_health"
+[0m20:31:57.949914 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_models.mart_supplier_risk"
+[0m20:31:57.952907 [debug] [Thread-4 (]: Began executing node model.dbt_models.mart_inventory_health
+[0m20:31:57.959889 [debug] [Thread-1 (]: Began executing node model.dbt_models.mart_supplier_risk
+[0m20:31:58.072587 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_models.mart_supplier_risk"
+[0m20:31:58.075581 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_models.mart_inventory_health"
+[0m20:31:58.078570 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m20:31:58.080566 [debug] [Thread-1 (]: On model.dbt_models.mart_supplier_risk: BEGIN
+[0m20:31:58.082562 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m20:31:58.085555 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:31:58.086551 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: BEGIN
+[0m20:31:58.087546 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:31:58.088544 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m20:31:58.089541 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m20:31:58.090538 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m20:31:58.092546 [debug] [Thread-1 (]: On model.dbt_models.mart_supplier_risk: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_supplier_risk"} */
+
+  
+    
+    
+
+    create  table
+      "opticalflow"."transformed_marts"."mart_supplier_risk__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_supplier_risk.sql
+WITH suppliers AS (
+    SELECT * FROM "opticalflow"."transformed_staging"."stg_suppliers"
+),
+
+shipments AS (
+    SELECT * FROM "opticalflow"."transformed_staging"."stg_shipments"
+),
+
+shipment_stats AS (
+    SELECT
+        supplier_id,
+        COUNT(*)                                        AS total_shipments,
+        SUM(CASE WHEN is_disrupted THEN 1 ELSE 0 END)  AS disrupted_shipments,
+        AVG(delay_days)                                 AS avg_delay_days,
+        MAX(delay_days)                                 AS max_delay_days,
+        SUM(freight_cost_usd)                           AS total_freight_cost
+    FROM shipments
+    GROUP BY supplier_id
+)
+
+SELECT
+    s.supplier_id,
+    s.supplier_name,
+    s.country,
+    s.product_category,
+    s.risk_level,
+    s.reliability_score,
+    s.lead_time_days,
+    s.is_active,
+    s.annual_spend_usd,
+    COALESCE(ss.total_shipments, 0)                     AS total_shipments,
+    COALESCE(ss.disrupted_shipments, 0)                 AS disrupted_shipments,
+    COALESCE(ss.avg_delay_days, 0)                      AS avg_delay_days,
+    COALESCE(ss.max_delay_days, 0)                      AS max_delay_days,
+    COALESCE(ss.total_freight_cost, 0)                  AS total_freight_cost,
+    ROUND(
+        COALESCE(ss.disrupted_shipments, 0) * 1.0 /
+        NULLIF(ss.total_shipments, 0) * 100, 2
+    )                                                   AS disruption_rate_pct,
+    CASE
+        WHEN s.risk_level = 'CRITICAL'                  THEN 4
+        WHEN s.risk_level = 'HIGH'                      THEN 3
+        WHEN s.risk_level = 'MEDIUM'                    THEN 2
+        ELSE                                                 1
+    END                                                 AS risk_score
+FROM suppliers s
+LEFT JOIN shipment_stats ss ON s.supplier_id = ss.supplier_id
+    );
+  
+  
+[0m20:31:58.093530 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m20:31:58.094528 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_inventory_health"} */
+
+  
+    
+    
+
+    create  table
+      "opticalflow"."transformed_marts"."mart_inventory_health__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_inventory_health.sql
+WITH inventory AS (
+    SELECT * FROM "opticalflow"."transformed_staging"."stg_inventory"
+),
+
+suppliers AS (
+    SELECT supplier_id, supplier_name, country, risk_level
+    FROM "opticalflow"."transformed_staging"."stg_suppliers"
+)
+
+SELECT
+    i.inventory_id,
+    i.sku,
+    i.product_category,
+    i.warehouse,
+    i.supplier_id,
+    s.supplier_name,
+    s.country                                               AS supplier_country,
+    s.risk_level                                            AS supplier_risk,
+    i.quantity_on_hand,
+    i.reorder_point,
+    i.is_below_reorder,
+    i.unit_cost_usd,
+    i.stock_value_usd,
+    i.last_restocked_date,
+    i.expiry_date,
+    CURRENT_DATE - i.last_restocked_date                    AS days_since_restock,
+    i.expiry_date - CURRENT_DATE                            AS days_to_expiry,
+    CASE
+        WHEN i.quantity_on_hand = 0                         THEN 'STOCKOUT'
+        WHEN i.is_below_reorder                             THEN 'CRITICAL'
+        WHEN i.quantity_on_hand < i.reorder_point * 1.5    THEN 'LOW'
+        ELSE                                                     'HEALTHY'
+    END                                                     AS stock_status
+FROM inventory i
+LEFT JOIN suppliers s ON i.supplier_id = s.supplier_id
+    );
+  
+  
+[0m20:31:58.121455 [debug] [Thread-4 (]: SQL status: OK in 0.025 seconds
+[0m20:31:58.122454 [debug] [Thread-1 (]: SQL status: OK in 0.028 seconds
+[0m20:31:58.130432 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m20:31:58.139408 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m20:31:58.139408 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_inventory_health"} */
+alter table "opticalflow"."transformed_marts"."mart_inventory_health__dbt_tmp" rename to "mart_inventory_health"
+[0m20:31:58.140407 [debug] [Thread-1 (]: On model.dbt_models.mart_supplier_risk: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_supplier_risk"} */
+alter table "opticalflow"."transformed_marts"."mart_supplier_risk__dbt_tmp" rename to "mart_supplier_risk"
+[0m20:31:58.142400 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m20:31:58.143398 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m20:31:58.155367 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: COMMIT
+[0m20:31:58.158358 [debug] [Thread-1 (]: On model.dbt_models.mart_supplier_risk: COMMIT
+[0m20:31:58.159355 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m20:31:58.160354 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m20:31:58.161350 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: COMMIT
+[0m20:31:58.162348 [debug] [Thread-1 (]: On model.dbt_models.mart_supplier_risk: COMMIT
+[0m20:31:58.167333 [debug] [Thread-4 (]: SQL status: OK in 0.004 seconds
+[0m20:31:58.174315 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m20:31:58.175312 [debug] [Thread-1 (]: SQL status: OK in 0.012 seconds
+[0m20:31:58.176310 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_inventory_health"} */
+
+      drop table if exists "opticalflow"."transformed_marts"."mart_inventory_health__dbt_backup" cascade
+    
+[0m20:31:58.184290 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m20:31:58.186282 [debug] [Thread-1 (]: On model.dbt_models.mart_supplier_risk: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_supplier_risk"} */
+
+      drop table if exists "opticalflow"."transformed_marts"."mart_supplier_risk__dbt_backup" cascade
+    
+[0m20:31:58.187279 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m20:31:58.190280 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: Close
+[0m20:31:58.190280 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m20:31:58.192267 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E4E26890>]}
+[0m20:31:58.195258 [debug] [Thread-1 (]: On model.dbt_models.mart_supplier_risk: Close
+[0m20:31:58.197253 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cdb8bb72-2a9e-47d9-87f6-a4becf7e5a05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E4FAA3E0>]}
+[0m20:31:58.196256 [info ] [Thread-4 (]: 4 of 5 OK created sql table model transformed_marts.mart_inventory_health ...... [[32mOK[0m in 0.26s]
+[0m20:31:58.202240 [debug] [Thread-4 (]: Finished running node model.dbt_models.mart_inventory_health
+[0m20:31:58.201244 [info ] [Thread-1 (]: 5 of 5 OK created sql table model transformed_marts.mart_supplier_risk ......... [[32mOK[0m in 0.26s]
+[0m20:31:58.204234 [debug] [Thread-1 (]: Finished running node model.dbt_models.mart_supplier_risk
+[0m20:31:58.206228 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:31:58.207227 [debug] [MainThread]: On master: BEGIN
+[0m20:31:58.208225 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:31:58.210219 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m20:31:58.211216 [debug] [MainThread]: On master: COMMIT
+[0m20:31:58.211216 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:31:58.212212 [debug] [MainThread]: On master: COMMIT
+[0m20:31:58.213211 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m20:31:58.213211 [debug] [MainThread]: On master: Close
+[0m20:31:58.214208 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:31:58.216204 [debug] [MainThread]: Connection 'create_opticalflow_transformed_marts' was properly closed.
+[0m20:31:58.217203 [debug] [MainThread]: Connection 'create_opticalflow_transformed_staging' was properly closed.
+[0m20:31:58.218200 [debug] [MainThread]: Connection 'list_opticalflow_transformed_marts' was properly closed.
+[0m20:31:58.219196 [debug] [MainThread]: Connection 'list_opticalflow_transformed_staging' was properly closed.
+[0m20:31:58.220207 [debug] [MainThread]: Connection 'model.dbt_models.mart_supplier_risk' was properly closed.
+[0m20:31:58.220207 [debug] [MainThread]: Connection 'model.dbt_models.stg_shipments' was properly closed.
+[0m20:31:58.221191 [debug] [MainThread]: Connection 'model.dbt_models.stg_suppliers' was properly closed.
+[0m20:31:58.221191 [debug] [MainThread]: Connection 'model.dbt_models.mart_inventory_health' was properly closed.
+[0m20:31:58.222188 [info ] [MainThread]: 
+[0m20:31:58.223185 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 5.51 seconds (5.51s).
+[0m20:31:58.227173 [debug] [MainThread]: Command end result
+[0m20:31:58.357605 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\user\OpticalFlow\dbt_models\target\manifest.json
+[0m20:31:58.363588 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\user\OpticalFlow\dbt_models\target\semantic_manifest.json
+[0m20:31:58.387523 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\user\OpticalFlow\dbt_models\target\run_results.json
+[0m20:31:58.388522 [info ] [MainThread]: 
+[0m20:31:58.389518 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:31:58.391513 [info ] [MainThread]: 
+[0m20:31:58.395501 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m20:31:58.398494 [debug] [MainThread]: Command `dbt run` succeeded at 20:31:58.397497 after 12.45 seconds
+[0m20:31:58.400489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E2BE9E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E3C13AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E4E3D460B0>]}
+[0m20:31:58.402484 [debug] [MainThread]: Flushing usage events
+[0m20:32:00.854993 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:32:18.799488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001385F6C9DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000138608283D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000138608281F0>]}
+
+
+============================== 20:32:18.806469 | 37b2c06a-6d5d-4a79-a0cd-2b06e62f2522 ==============================
+[0m20:32:18.806469 [info ] [MainThread]: Running with dbt=1.11.11
+[0m20:32:18.808476 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\user\\OpticalFlow\\dbt_models', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\user\\OpticalFlow\\dbt_models\\logs'}
+[0m20:32:19.422858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '37b2c06a-6d5d-4a79-a0cd-2b06e62f2522', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001385C7A7730>]}
+[0m20:32:19.565824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '37b2c06a-6d5d-4a79-a0cd-2b06e62f2522', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001385FF146A0>]}
+[0m20:32:19.571807 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m20:32:20.129129 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m20:32:20.500163 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:32:20.501132 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:32:20.501132 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:32:20.583912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '37b2c06a-6d5d-4a79-a0cd-2b06e62f2522', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013861EB0130>]}
+[0m20:32:20.816735 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\user\OpticalFlow\dbt_models\target\manifest.json
+[0m20:32:20.823347 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\user\OpticalFlow\dbt_models\target\semantic_manifest.json
+[0m20:32:20.871215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '37b2c06a-6d5d-4a79-a0cd-2b06e62f2522', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013861E8A560>]}
+[0m20:32:20.873208 [info ] [MainThread]: Found 5 models, 485 macros
+[0m20:32:20.874206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '37b2c06a-6d5d-4a79-a0cd-2b06e62f2522', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013861E8A500>]}
+[0m20:32:20.877197 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:32:20.882184 [debug] [MainThread]: Command end result
+[0m20:32:20.952996 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\user\OpticalFlow\dbt_models\target\manifest.json
+[0m20:32:20.956986 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\user\OpticalFlow\dbt_models\target\semantic_manifest.json
+[0m20:32:20.965960 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\user\OpticalFlow\dbt_models\target\run_results.json
+[0m20:32:20.968955 [debug] [MainThread]: Command `dbt test` succeeded at 20:32:20.967955 after 2.39 seconds
+[0m20:32:20.969952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001385F6C9DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013861A0B580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001385FF146A0>]}
+[0m20:32:20.970948 [debug] [MainThread]: Flushing usage events
+[0m20:32:22.118509 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:41:31.822860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2DC99180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2EEB7BB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2EEB7430>]}
+
+
+============================== 01:41:31.831837 | d62d1240-9eb1-4e67-8a70-17a8f9c517ec ==============================
+[0m01:41:31.831837 [info ] [MainThread]: Running with dbt=1.11.11
+[0m01:41:31.832835 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'use_colors': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\OpticalFlow\\dbt_models\\logs'}
+[0m01:41:32.617704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2EDA5C30>]}
+[0m01:41:32.838115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2EEB7130>]}
+[0m01:41:32.845095 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m01:41:33.461180 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m01:41:33.871093 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:41:33.872091 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m01:41:33.872091 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:41:33.953389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B306B63E0>]}
+[0m01:41:34.159838 [debug] [MainThread]: Wrote artifact WritableManifest to c:\Users\user\OpticalFlow\dbt_models\target\manifest.json
+[0m01:41:34.165822 [debug] [MainThread]: Wrote artifact SemanticManifest to c:\Users\user\OpticalFlow\dbt_models\target\semantic_manifest.json
+[0m01:41:34.191673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B306E3940>]}
+[0m01:41:34.192672 [info ] [MainThread]: Found 5 models, 485 macros
+[0m01:41:34.193668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B306E2680>]}
+[0m01:41:34.196659 [info ] [MainThread]: 
+[0m01:41:34.197657 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m01:41:34.198654 [info ] [MainThread]: 
+[0m01:41:34.199651 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m01:41:34.215611 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_opticalflow'
+[0m01:41:34.223589 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_opticalflow'
+[0m01:41:34.412084 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow"
+[0m01:41:34.413082 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow"
+[0m01:41:34.414078 [debug] [ThreadPool]: On list_opticalflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "list_opticalflow"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"opticalflow"'
+    
+  
+  
+[0m01:41:34.415076 [debug] [ThreadPool]: On list_opticalflow: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "list_opticalflow"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"opticalflow"'
+    
+  
+  
+[0m01:41:34.417071 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:41:34.418068 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:41:34.463945 [debug] [ThreadPool]: SQL status: OK in 0.047 seconds
+[0m01:41:34.464942 [debug] [ThreadPool]: SQL status: OK in 0.047 seconds
+[0m01:41:34.466938 [debug] [ThreadPool]: On list_opticalflow: Close
+[0m01:41:34.469931 [debug] [ThreadPool]: On list_opticalflow: Close
+[0m01:41:34.471926 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_opticalflow, now create_opticalflow_transformed_marts)
+[0m01:41:34.472923 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_opticalflow, now create_opticalflow_transformed_staging)
+[0m01:41:34.474828 [debug] [ThreadPool]: Creating schema "database: "opticalflow"
+schema: "transformed_marts"
+"
+[0m01:41:34.476832 [debug] [ThreadPool]: Creating schema "database: "opticalflow"
+schema: "transformed_staging"
+"
+[0m01:41:34.503759 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_marts"
+[0m01:41:34.506748 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_staging"
+[0m01:41:34.507745 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "create_opticalflow_transformed_marts"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='opticalflow'
+        and type='sqlite'
+    
+  
+[0m01:41:34.509739 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "create_opticalflow_transformed_staging"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='opticalflow'
+        and type='sqlite'
+    
+  
+[0m01:41:34.510739 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:41:34.511734 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:41:34.513730 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m01:41:34.514727 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m01:41:34.516721 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_marts"
+[0m01:41:34.519714 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_staging"
+[0m01:41:34.520710 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: BEGIN
+[0m01:41:34.520710 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: BEGIN
+[0m01:41:34.522704 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m01:41:34.523703 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_marts"
+[0m01:41:34.524699 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m01:41:34.525699 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "create_opticalflow_transformed_marts"} */
+
+    
+    
+        create schema if not exists "opticalflow"."transformed_marts"
+    
+[0m01:41:34.526695 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_staging"
+[0m01:41:34.527697 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "create_opticalflow_transformed_staging"} */
+
+    
+    
+        create schema if not exists "opticalflow"."transformed_staging"
+    
+[0m01:41:34.528690 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m01:41:34.530684 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: COMMIT
+[0m01:41:34.531683 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m01:41:34.532678 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_marts"
+[0m01:41:34.535671 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: COMMIT
+[0m01:41:34.535671 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: COMMIT
+[0m01:41:34.536668 [debug] [ThreadPool]: Using duckdb connection "create_opticalflow_transformed_staging"
+[0m01:41:34.537666 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: COMMIT
+[0m01:41:34.539660 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m01:41:34.540658 [debug] [ThreadPool]: On create_opticalflow_transformed_marts: Close
+[0m01:41:34.541656 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m01:41:34.543650 [debug] [ThreadPool]: On create_opticalflow_transformed_staging: Close
+[0m01:41:34.547344 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_opticalflow_transformed_marts'
+[0m01:41:34.560316 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_opticalflow_transformed_staging'
+[0m01:41:34.566319 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow_transformed_marts"
+[0m01:41:34.565302 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow_transformed_staging"
+[0m01:41:34.567295 [debug] [ThreadPool]: On list_opticalflow_transformed_marts: BEGIN
+[0m01:41:34.568293 [debug] [ThreadPool]: On list_opticalflow_transformed_staging: BEGIN
+[0m01:41:34.569292 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:41:34.570289 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:41:34.572283 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m01:41:34.574277 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow_transformed_marts"
+[0m01:41:34.575276 [debug] [ThreadPool]: On list_opticalflow_transformed_marts: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "list_opticalflow_transformed_marts"} */
+select
+      'opticalflow' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'transformed_marts'
+    and lower(table_catalog) = 'opticalflow'
+  
+[0m01:41:34.577268 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m01:41:34.579264 [debug] [ThreadPool]: Using duckdb connection "list_opticalflow_transformed_staging"
+[0m01:41:34.580264 [debug] [ThreadPool]: On list_opticalflow_transformed_staging: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "connection_name": "list_opticalflow_transformed_staging"} */
+select
+      'opticalflow' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'transformed_staging'
+    and lower(table_catalog) = 'opticalflow'
+  
+[0m01:41:34.589237 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m01:41:34.591231 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m01:41:34.593227 [debug] [ThreadPool]: On list_opticalflow_transformed_staging: ROLLBACK
+[0m01:41:34.596217 [debug] [ThreadPool]: On list_opticalflow_transformed_marts: ROLLBACK
+[0m01:41:34.598214 [debug] [ThreadPool]: Failed to rollback 'list_opticalflow_transformed_staging'
+[0m01:41:34.599212 [debug] [ThreadPool]: On list_opticalflow_transformed_staging: Close
+[0m01:41:34.600210 [debug] [ThreadPool]: Failed to rollback 'list_opticalflow_transformed_marts'
+[0m01:41:34.601205 [debug] [ThreadPool]: On list_opticalflow_transformed_marts: Close
+[0m01:41:34.604196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2F140EE0>]}
+[0m01:41:34.606191 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:41:34.607191 [debug] [MainThread]: On master: BEGIN
+[0m01:41:34.607191 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:41:34.608187 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m01:41:34.609184 [debug] [MainThread]: On master: COMMIT
+[0m01:41:34.610181 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:41:34.611179 [debug] [MainThread]: On master: COMMIT
+[0m01:41:34.612177 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m01:41:34.613174 [debug] [MainThread]: On master: Close
+[0m01:41:34.621150 [debug] [Thread-1 (]: Began running node model.dbt_models.stg_inventory
+[0m01:41:34.623145 [debug] [Thread-2 (]: Began running node model.dbt_models.stg_shipments
+[0m01:41:34.625141 [debug] [Thread-3 (]: Began running node model.dbt_models.stg_suppliers
+[0m01:41:34.627136 [info ] [Thread-1 (]: 1 of 5 START sql view model transformed_staging.stg_inventory .................. [RUN]
+[0m01:41:34.629130 [info ] [Thread-2 (]: 2 of 5 START sql view model transformed_staging.stg_shipments .................. [RUN]
+[0m01:41:34.630127 [info ] [Thread-3 (]: 3 of 5 START sql view model transformed_staging.stg_suppliers .................. [RUN]
+[0m01:41:34.632121 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.dbt_models.stg_inventory'
+[0m01:41:34.633119 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.dbt_models.stg_shipments'
+[0m01:41:34.634116 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.dbt_models.stg_suppliers'
+[0m01:41:34.636113 [debug] [Thread-1 (]: Began compiling node model.dbt_models.stg_inventory
+[0m01:41:34.636113 [debug] [Thread-2 (]: Began compiling node model.dbt_models.stg_shipments
+[0m01:41:34.638105 [debug] [Thread-3 (]: Began compiling node model.dbt_models.stg_suppliers
+[0m01:41:34.655059 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_models.stg_inventory"
+[0m01:41:34.663039 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_models.stg_shipments"
+[0m01:41:34.667028 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_models.stg_suppliers"
+[0m01:41:34.670020 [debug] [Thread-1 (]: Began executing node model.dbt_models.stg_inventory
+[0m01:41:34.677002 [debug] [Thread-2 (]: Began executing node model.dbt_models.stg_shipments
+[0m01:41:34.713904 [debug] [Thread-3 (]: Began executing node model.dbt_models.stg_suppliers
+[0m01:41:34.825606 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_models.stg_inventory"
+[0m01:41:34.828597 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_models.stg_shipments"
+[0m01:41:34.822612 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_models.stg_suppliers"
+[0m01:41:34.831589 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m01:41:34.833584 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m01:41:34.834581 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: BEGIN
+[0m01:41:34.836575 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m01:41:34.837574 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: BEGIN
+[0m01:41:34.838569 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m01:41:34.840565 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: BEGIN
+[0m01:41:34.841562 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m01:41:34.843556 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m01:41:34.845553 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m01:41:34.846549 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m01:41:34.847520 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m01:41:34.847520 [debug] [Thread-3 (]: SQL status: OK in 0.005 seconds
+[0m01:41:34.848531 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m01:41:34.849520 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_inventory"} */
+
+  
+  create view "opticalflow"."transformed_staging"."stg_inventory__dbt_tmp" as (
+    -- models/staging/stg_inventory.sql
+WITH source AS (
+    SELECT * FROM raw.raw_inventory
+)
+
+SELECT
+    inventory_id,
+    TRIM(sku)                                   AS sku,
+    TRIM(product_category)                      AS product_category,
+    TRIM(warehouse)                             AS warehouse,
+    supplier_id,
+    CAST(quantity_on_hand AS INTEGER)           AS quantity_on_hand,
+    CAST(reorder_point AS INTEGER)              AS reorder_point,
+    CAST(below_reorder AS BOOLEAN)              AS is_below_reorder,
+    CAST(unit_cost_usd AS DOUBLE)               AS unit_cost_usd,
+    CAST(last_restocked_date AS DATE)           AS last_restocked_date,
+    CAST(expiry_date AS DATE)                   AS expiry_date,
+    ROUND(quantity_on_hand * unit_cost_usd, 2)  AS stock_value_usd,
+    CAST(_ingested_at AS TIMESTAMP)             AS ingested_at
+FROM source
+WHERE inventory_id IS NOT NULL
+  );
+
+[0m01:41:34.850517 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m01:41:34.851515 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_shipments"} */
+
+  
+  create view "opticalflow"."transformed_staging"."stg_shipments__dbt_tmp" as (
+    -- models/staging/stg_shipments.sql
+WITH source AS (
+    SELECT * FROM raw.raw_shipments
+)
+
+SELECT
+    shipment_id,
+    supplier_id,
+    TRIM(sku)                                   AS sku,
+    TRIM(origin_country)                        AS origin_country,
+    TRIM(destination_warehouse)                 AS destination_warehouse,
+    CAST(quantity_shipped AS INTEGER)           AS quantity_shipped,
+    CAST(scheduled_date AS DATE)                AS scheduled_date,
+    CAST(actual_arrival_date AS DATE)           AS actual_arrival_date,
+    CAST(delay_days AS INTEGER)                 AS delay_days,
+    TRIM(status)                                AS status,
+    CAST(freight_cost_usd AS DOUBLE)            AS freight_cost_usd,
+    TRIM(carrier)                               AS carrier,
+    CAST(disruption_flag AS BOOLEAN)            AS is_disrupted,
+    CASE
+        WHEN delay_days = 0             THEN 'NO_DELAY'
+        WHEN delay_days BETWEEN 1 AND 5 THEN 'MINOR'
+        WHEN delay_days BETWEEN 6 AND 14 THEN 'MODERATE'
+        ELSE                                 'SEVERE'
+    END                                         AS delay_category,
+    CAST(_ingested_at AS TIMESTAMP)             AS ingested_at
+FROM source
+WHERE shipment_id IS NOT NULL
+  );
+
+[0m01:41:34.853508 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_suppliers"} */
+
+  
+  create view "opticalflow"."transformed_staging"."stg_suppliers__dbt_tmp" as (
+    -- models/staging/stg_suppliers.sql
+WITH source AS (
+    SELECT * FROM raw.raw_suppliers
+)
+
+SELECT
+    supplier_id,
+    TRIM(supplier_name)                         AS supplier_name,
+    TRIM(country)                               AS country,
+    LOWER(TRIM(contact_email))                  AS contact_email,
+    TRIM(product_category)                      AS product_category,
+    CAST(lead_time_days AS INTEGER)             AS lead_time_days,
+    CAST(reliability_score AS DOUBLE)           AS reliability_score,
+    TRIM(risk_level)                            AS risk_level,
+    CAST(active AS BOOLEAN)                     AS is_active,
+    CAST(onboarded_date AS DATE)                AS onboarded_date,
+    CAST(annual_spend_usd AS DOUBLE)            AS annual_spend_usd,
+    CAST(_ingested_at AS TIMESTAMP)             AS ingested_at
+FROM source
+WHERE supplier_id IS NOT NULL
+  );
+
+[0m01:41:34.856500 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m01:41:34.857497 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m01:41:34.880437 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m01:41:34.881440 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_inventory"} */
+alter view "opticalflow"."transformed_staging"."stg_inventory" rename to "stg_inventory__dbt_backup"
+[0m01:41:34.882432 [debug] [Thread-3 (]: SQL status: OK in 0.025 seconds
+[0m01:41:34.885815 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m01:41:34.892785 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m01:41:34.893782 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_shipments"} */
+alter view "opticalflow"."transformed_staging"."stg_shipments" rename to "stg_shipments__dbt_backup"
+[0m01:41:34.895777 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m01:41:34.908742 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m01:41:34.909741 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_suppliers"} */
+alter view "opticalflow"."transformed_staging"."stg_suppliers" rename to "stg_suppliers__dbt_backup"
+[0m01:41:34.911735 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_inventory"} */
+alter view "opticalflow"."transformed_staging"."stg_inventory__dbt_tmp" rename to "stg_inventory"
+[0m01:41:34.912732 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m01:41:34.921710 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m01:41:34.923704 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_shipments"} */
+alter view "opticalflow"."transformed_staging"."stg_shipments__dbt_tmp" rename to "stg_shipments"
+[0m01:41:34.924701 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m01:41:34.925945 [debug] [Thread-3 (]: SQL status: OK in 0.011 seconds
+[0m01:41:34.950883 [debug] [Thread-2 (]: SQL status: OK in 0.024 seconds
+[0m01:41:34.952877 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m01:41:34.976812 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: COMMIT
+[0m01:41:34.982803 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: COMMIT
+[0m01:41:34.982803 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_suppliers"} */
+alter view "opticalflow"."transformed_staging"."stg_suppliers__dbt_tmp" rename to "stg_suppliers"
+[0m01:41:34.984109 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m01:41:34.985078 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m01:41:34.987072 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: COMMIT
+[0m01:41:34.988069 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: COMMIT
+[0m01:41:34.990064 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m01:41:34.997048 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: COMMIT
+[0m01:41:34.999040 [debug] [Thread-2 (]: SQL status: OK in 0.007 seconds
+[0m01:41:35.000038 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m01:41:35.002032 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m01:41:35.015625 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: COMMIT
+[0m01:41:35.027925 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.stg_shipments"
+[0m01:41:35.028922 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_models.stg_inventory"
+[0m01:41:35.030917 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_shipments"} */
+
+      drop view if exists "opticalflow"."transformed_staging"."stg_shipments__dbt_backup" cascade
+    
+[0m01:41:35.031923 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_inventory"} */
+
+      drop view if exists "opticalflow"."transformed_staging"."stg_inventory__dbt_backup" cascade
+    
+[0m01:41:35.033908 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m01:41:35.040891 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m01:41:35.044878 [debug] [Thread-3 (]: Using duckdb connection "model.dbt_models.stg_suppliers"
+[0m01:41:35.050864 [debug] [Thread-2 (]: On model.dbt_models.stg_shipments: Close
+[0m01:41:35.051860 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.stg_suppliers"} */
+
+      drop view if exists "opticalflow"."transformed_staging"."stg_suppliers__dbt_backup" cascade
+    
+[0m01:41:35.052857 [debug] [Thread-1 (]: SQL status: OK in 0.018 seconds
+[0m01:41:35.058843 [debug] [Thread-1 (]: On model.dbt_models.stg_inventory: Close
+[0m01:41:35.061834 [debug] [Thread-3 (]: SQL status: OK in 0.005 seconds
+[0m01:41:35.064826 [debug] [Thread-3 (]: On model.dbt_models.stg_suppliers: Close
+[0m01:41:35.065823 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B31B18C10>]}
+[0m01:41:35.066823 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B30A9F6A0>]}
+[0m01:41:35.067825 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B31B77730>]}
+[0m01:41:35.069813 [info ] [Thread-2 (]: 2 of 5 OK created sql view model transformed_staging.stg_shipments ............. [[32mOK[0m in 0.42s]
+[0m01:41:35.070809 [info ] [Thread-1 (]: 1 of 5 OK created sql view model transformed_staging.stg_inventory ............. [[32mOK[0m in 0.43s]
+[0m01:41:35.073460 [info ] [Thread-3 (]: 3 of 5 OK created sql view model transformed_staging.stg_suppliers ............. [[32mOK[0m in 0.43s]
+[0m01:41:35.076448 [debug] [Thread-2 (]: Finished running node model.dbt_models.stg_shipments
+[0m01:41:35.077447 [debug] [Thread-1 (]: Finished running node model.dbt_models.stg_inventory
+[0m01:41:35.079441 [debug] [Thread-3 (]: Finished running node model.dbt_models.stg_suppliers
+[0m01:41:35.082433 [debug] [Thread-4 (]: Began running node model.dbt_models.mart_inventory_health
+[0m01:41:35.083431 [debug] [Thread-2 (]: Began running node model.dbt_models.mart_supplier_risk
+[0m01:41:35.084823 [info ] [Thread-4 (]: 4 of 5 START sql table model transformed_marts.mart_inventory_health ........... [RUN]
+[0m01:41:35.086811 [info ] [Thread-2 (]: 5 of 5 START sql table model transformed_marts.mart_supplier_risk .............. [RUN]
+[0m01:41:35.087809 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.dbt_models.mart_inventory_health'
+[0m01:41:35.088806 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_models.stg_shipments, now model.dbt_models.mart_supplier_risk)
+[0m01:41:35.090801 [debug] [Thread-4 (]: Began compiling node model.dbt_models.mart_inventory_health
+[0m01:41:35.091799 [debug] [Thread-2 (]: Began compiling node model.dbt_models.mart_supplier_risk
+[0m01:41:35.102767 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.104790 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_models.mart_inventory_health"
+[0m01:41:35.107756 [debug] [Thread-2 (]: Began executing node model.dbt_models.mart_supplier_risk
+[0m01:41:35.114737 [debug] [Thread-4 (]: Began executing node model.dbt_models.mart_inventory_health
+[0m01:41:35.197519 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.212477 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_models.mart_inventory_health"
+[0m01:41:35.216466 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.218462 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: BEGIN
+[0m01:41:35.220455 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m01:41:35.223448 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m01:41:35.224444 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: BEGIN
+[0m01:41:35.226442 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m01:41:35.228434 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m01:41:35.230430 [debug] [Thread-4 (]: SQL status: OK in 0.004 seconds
+[0m01:41:35.232422 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.233421 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m01:41:35.238405 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_supplier_risk"} */
+
+  
+    
+    
+
+    create  table
+      "opticalflow"."transformed_marts"."mart_supplier_risk__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_supplier_risk.sql
+WITH suppliers AS (
+    SELECT * FROM "opticalflow"."transformed_staging"."stg_suppliers"
+),
+
+shipments AS (
+    SELECT * FROM "opticalflow"."transformed_staging"."stg_shipments"
+),
+
+shipment_stats AS (
+    SELECT
+        supplier_id,
+        COUNT(*)                                        AS total_shipments,
+        SUM(CASE WHEN is_disrupted THEN 1 ELSE 0 END)  AS disrupted_shipments,
+        AVG(delay_days)                                 AS avg_delay_days,
+        MAX(delay_days)                                 AS max_delay_days,
+        SUM(freight_cost_usd)                           AS total_freight_cost
+    FROM shipments
+    GROUP BY supplier_id
+)
+
+SELECT
+    s.supplier_id,
+    s.supplier_name,
+    s.country,
+    s.product_category,
+    s.risk_level,
+    s.reliability_score,
+    s.lead_time_days,
+    s.is_active,
+    s.annual_spend_usd,
+    COALESCE(ss.total_shipments, 0)                     AS total_shipments,
+    COALESCE(ss.disrupted_shipments, 0)                 AS disrupted_shipments,
+    COALESCE(ss.avg_delay_days, 0)                      AS avg_delay_days,
+    COALESCE(ss.max_delay_days, 0)                      AS max_delay_days,
+    COALESCE(ss.total_freight_cost, 0)                  AS total_freight_cost,
+    ROUND(
+        COALESCE(ss.disrupted_shipments, 0) * 1.0 /
+        NULLIF(ss.total_shipments, 0) * 100, 2
+    )                                                   AS disruption_rate_pct,
+    CASE
+        WHEN s.risk_level = 'CRITICAL'                  THEN 4
+        WHEN s.risk_level = 'HIGH'                      THEN 3
+        WHEN s.risk_level = 'MEDIUM'                    THEN 2
+        ELSE                                                 1
+    END                                                 AS risk_score
+FROM suppliers s
+LEFT JOIN shipment_stats ss ON s.supplier_id = ss.supplier_id
+    );
+  
+  
+[0m01:41:35.242397 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_inventory_health"} */
+
+  
+    
+    
+
+    create  table
+      "opticalflow"."transformed_marts"."mart_inventory_health__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_inventory_health.sql
+WITH inventory AS (
+    SELECT * FROM "opticalflow"."transformed_staging"."stg_inventory"
+),
+
+suppliers AS (
+    SELECT supplier_id, supplier_name, country, risk_level
+    FROM "opticalflow"."transformed_staging"."stg_suppliers"
+)
+
+SELECT
+    i.inventory_id,
+    i.sku,
+    i.product_category,
+    i.warehouse,
+    i.supplier_id,
+    s.supplier_name,
+    s.country                                               AS supplier_country,
+    s.risk_level                                            AS supplier_risk,
+    i.quantity_on_hand,
+    i.reorder_point,
+    i.is_below_reorder,
+    i.unit_cost_usd,
+    i.stock_value_usd,
+    i.last_restocked_date,
+    i.expiry_date,
+    CURRENT_DATE - i.last_restocked_date                    AS days_since_restock,
+    i.expiry_date - CURRENT_DATE                            AS days_to_expiry,
+    CASE
+        WHEN i.quantity_on_hand = 0                         THEN 'STOCKOUT'
+        WHEN i.is_below_reorder                             THEN 'CRITICAL'
+        WHEN i.quantity_on_hand < i.reorder_point * 1.5    THEN 'LOW'
+        ELSE                                                     'HEALTHY'
+    END                                                     AS stock_status
+FROM inventory i
+LEFT JOIN suppliers s ON i.supplier_id = s.supplier_id
+    );
+  
+  
+[0m01:41:35.267330 [debug] [Thread-2 (]: SQL status: OK in 0.023 seconds
+[0m01:41:35.275308 [debug] [Thread-4 (]: SQL status: OK in 0.030 seconds
+[0m01:41:35.282288 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.284283 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m01:41:35.285281 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_supplier_risk"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'transformed_marts'
+      AND table_name = 'mart_supplier_risk'
+  
+[0m01:41:35.286278 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_inventory_health"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'transformed_marts'
+      AND table_name = 'mart_inventory_health'
+  
+[0m01:41:35.289271 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m01:41:35.293259 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.294257 [debug] [Thread-4 (]: SQL status: OK in 0.006 seconds
+[0m01:41:35.295254 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_supplier_risk"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'transformed_marts'
+      AND table_name = 'mart_supplier_risk'
+  
+[0m01:41:35.298245 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m01:41:35.299243 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_inventory_health"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'transformed_marts'
+      AND table_name = 'mart_inventory_health'
+  
+[0m01:41:35.300241 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m01:41:35.309215 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.310214 [debug] [Thread-4 (]: SQL status: OK in 0.009 seconds
+[0m01:41:35.311211 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_supplier_risk"} */
+alter table "opticalflow"."transformed_marts"."mart_supplier_risk" rename to "mart_supplier_risk__dbt_backup"
+[0m01:41:35.319190 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m01:41:35.320187 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_inventory_health"} */
+alter table "opticalflow"."transformed_marts"."mart_inventory_health" rename to "mart_inventory_health__dbt_backup"
+[0m01:41:35.321184 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m01:41:35.332155 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.333152 [debug] [Thread-4 (]: SQL status: OK in 0.011 seconds
+[0m01:41:35.334149 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_supplier_risk"} */
+alter table "opticalflow"."transformed_marts"."mart_supplier_risk__dbt_tmp" rename to "mart_supplier_risk"
+[0m01:41:35.348114 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m01:41:35.350108 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m01:41:35.370054 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_inventory_health"} */
+alter table "opticalflow"."transformed_marts"."mart_inventory_health__dbt_tmp" rename to "mart_inventory_health"
+[0m01:41:35.371053 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: COMMIT
+[0m01:41:35.375042 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m01:41:35.377036 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.384586 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: COMMIT
+[0m01:41:35.386567 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: COMMIT
+[0m01:41:35.389559 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m01:41:35.392550 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: COMMIT
+[0m01:41:35.395543 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m01:41:35.412498 [debug] [Thread-4 (]: SQL status: OK in 0.017 seconds
+[0m01:41:35.414492 [debug] [Thread-2 (]: Using duckdb connection "model.dbt_models.mart_supplier_risk"
+[0m01:41:35.428454 [debug] [Thread-4 (]: Using duckdb connection "model.dbt_models.mart_inventory_health"
+[0m01:41:35.431446 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_supplier_risk"} */
+
+      drop table if exists "opticalflow"."transformed_marts"."mart_supplier_risk__dbt_backup" cascade
+    
+[0m01:41:35.432443 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_models", "target_name": "dev", "node_id": "model.dbt_models.mart_inventory_health"} */
+
+      drop table if exists "opticalflow"."transformed_marts"."mart_inventory_health__dbt_backup" cascade
+    
+[0m01:41:35.436433 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m01:41:35.440423 [debug] [Thread-2 (]: On model.dbt_models.mart_supplier_risk: Close
+[0m01:41:35.441419 [debug] [Thread-4 (]: SQL status: OK in 0.007 seconds
+[0m01:41:35.443414 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B31C9C9D0>]}
+[0m01:41:35.446407 [debug] [Thread-4 (]: On model.dbt_models.mart_inventory_health: Close
+[0m01:41:35.448400 [info ] [Thread-2 (]: 5 of 5 OK created sql table model transformed_marts.mart_supplier_risk ......... [[32mOK[0m in 0.35s]
+[0m01:41:35.450396 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd62d1240-9eb1-4e67-8a70-17a8f9c517ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B31CA74C0>]}
+[0m01:41:35.451393 [debug] [Thread-2 (]: Finished running node model.dbt_models.mart_supplier_risk
+[0m01:41:35.453389 [info ] [Thread-4 (]: 4 of 5 OK created sql table model transformed_marts.mart_inventory_health ...... [[32mOK[0m in 0.36s]
+[0m01:41:35.457018 [debug] [Thread-4 (]: Finished running node model.dbt_models.mart_inventory_health
+[0m01:41:35.460756 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:41:35.461851 [debug] [MainThread]: On master: BEGIN
+[0m01:41:35.462934 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:41:35.464510 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m01:41:35.465666 [debug] [MainThread]: On master: COMMIT
+[0m01:41:35.467277 [debug] [MainThread]: Using duckdb connection "master"
+[0m01:41:35.468877 [debug] [MainThread]: On master: COMMIT
+[0m01:41:35.470453 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m01:41:35.472114 [debug] [MainThread]: On master: Close
+[0m01:41:35.474149 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:41:35.475744 [debug] [MainThread]: Connection 'create_opticalflow_transformed_marts' was properly closed.
+[0m01:41:35.476804 [debug] [MainThread]: Connection 'create_opticalflow_transformed_staging' was properly closed.
+[0m01:41:35.477335 [debug] [MainThread]: Connection 'list_opticalflow_transformed_marts' was properly closed.
+[0m01:41:35.478417 [debug] [MainThread]: Connection 'list_opticalflow_transformed_staging' was properly closed.
+[0m01:41:35.479828 [debug] [MainThread]: Connection 'model.dbt_models.stg_inventory' was properly closed.
+[0m01:41:35.481009 [debug] [MainThread]: Connection 'model.dbt_models.mart_supplier_risk' was properly closed.
+[0m01:41:35.481812 [debug] [MainThread]: Connection 'model.dbt_models.stg_suppliers' was properly closed.
+[0m01:41:35.482872 [debug] [MainThread]: Connection 'model.dbt_models.mart_inventory_health' was properly closed.
+[0m01:41:35.484446 [info ] [MainThread]: 
+[0m01:41:35.486068 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 1.28 seconds (1.28s).
+[0m01:41:35.490639 [debug] [MainThread]: Command end result
+[0m01:41:35.657183 [debug] [MainThread]: Wrote artifact WritableManifest to c:\Users\user\OpticalFlow\dbt_models\target\manifest.json
+[0m01:41:35.663164 [debug] [MainThread]: Wrote artifact SemanticManifest to c:\Users\user\OpticalFlow\dbt_models\target\semantic_manifest.json
+[0m01:41:35.678125 [debug] [MainThread]: Wrote artifact RunExecutionResult to c:\Users\user\OpticalFlow\dbt_models\target\run_results.json
+[0m01:41:35.679123 [info ] [MainThread]: 
+[0m01:41:35.680127 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:41:35.681116 [info ] [MainThread]: 
+[0m01:41:35.682114 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m01:41:35.684108 [debug] [MainThread]: Command `dbt run` succeeded at 01:41:35.684108 after 4.10 seconds
+[0m01:41:35.685384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2DC99180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2DF4B1C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027B2B8E53C0>]}
+[0m01:41:35.686368 [debug] [MainThread]: Flushing usage events
+[0m01:41:37.072669 [debug] [MainThread]: An error was encountered while trying to flush usage events

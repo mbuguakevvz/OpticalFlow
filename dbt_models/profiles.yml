@@ -1,0 +1,8 @@
+dbt_models:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/opticalflow.duckdb
+      schema: transformed
+      threads: 4
